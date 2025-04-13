@@ -110,7 +110,7 @@ export function Login() {
                             }
                             </Button>
                             <a href="https://lms-wizh.onrender.com/auth/google">
-  <Button variant={"outline"}><img src="./src/components/ui/google logo.svg" className="h-5 w-5"></img> Google</Button>
+  <Button variant={"outline"}><img src="https://fonts.gstatic.com/s/i/productlogos/googleg/v6/24px.svg" className="h-5 w-5"></img> Google</Button>
 </a>
                         </CardFooter>
                     </Card>
@@ -152,7 +152,7 @@ export function Login() {
                                 </>) : "SignUp"
                             }</Button>
                             <a href="https://lms-wizh.onrender.com/auth/google">
-  <Button variant={"outline"}><img src="./src/components/ui/google logo.svg" className="h-5 w-5"></img> Google</Button>
+  <Button variant={"outline"}><img src="https://fonts.gstatic.com/s/i/productlogos/googleg/v6/24px.svg" className="h-5 w-5"></img> Google</Button>
 </a>
                         </CardFooter>
                     </Card>
