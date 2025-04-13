@@ -77,6 +77,19 @@ export const verifyPayment = async (req, res) => {
         const user=await User.findById(userId);
         user.enrolledCourses.push(updatedPaymentDetails.courseId);
         user.save()
+        const course=await Course.findById(updatedPaymentDetails.courseId);
+        if(!course){
+            return res.status(404).json({
+                success: false,
+                message: 'Course not found',
+            });
+        }
+        // Update course with enrolled students
+        if (!course.enrolledStudents) {
+            course.enrolledStudents = []; // Initialize if not already an array
+        }       
+        course.enrolledStudents.push(userId);
+        course.save()
         return res.json({ success: true, message: 'Payment Verified Successfully' });
     } catch (error) {
         console.error('Verify Payment Error:', error);

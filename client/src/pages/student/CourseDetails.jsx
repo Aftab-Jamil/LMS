@@ -17,7 +17,7 @@ export default function CourseDetails() {
   },[courseId, refetch])
   const navigate=useNavigate()
   if (isLoading) return <h1>Loading...</h1>;
-  if (isError) return <h>Failed to load course details</h>;
+  if (isError) return <h1>Failed to load course details</h1>;
   const {course,paymentDetails}=data
 
     return (

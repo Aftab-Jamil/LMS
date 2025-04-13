@@ -102,13 +102,16 @@ export function Login() {
                                 {fieldError.password && <p className="text-red-500 text-sm">{fieldError.password}</p>}
                             </div>
                         </CardContent>
-                        <CardFooter className="flex justify-center">
+                        <CardFooter className="flex justify-center gap-2">
                             <Button disabled={lIsLoading} onClick={() => handleSubmit("login")}>{
                                 lIsLoading ? (<>
                                     <Loader2 className="m-2 w-4 h-4 animate-spin" /> Loading...
                                 </>) : "Login"
                             }
                             </Button>
+                            <a href="http://localhost:8080/auth/google">
+  <Button variant={"outline"}><img src="./src/components/ui/google logo.svg" className="h-5 w-5"></img> Google</Button>
+</a>
                         </CardFooter>
                     </Card>
                 </TabsContent>
@@ -142,12 +145,15 @@ export function Login() {
                                 {fieldError.password && <p className="text-red-500 text-sm">{fieldError.password}</p>}
                             </div>
                         </CardContent>
-                        <CardFooter className="flex justify-center">
+                        <CardFooter className="flex justify-center gap-2">
                             <Button disabled={rIsLoading} onClick={() => handleSubmit("signup")}>{
                                 rIsLoading ? (<>
                                     <Loader2 className="m-2 w-4 h-4 animate-spin" /> Loading...
                                 </>) : "SignUp"
                             }</Button>
+                            <a href="http://localhost:8080/auth/google">
+  <Button variant={"outline"}><img src="./src/components/ui/google logo.svg" className="h-5 w-5"></img> Google</Button>
+</a>
                         </CardFooter>
                     </Card>
                 </TabsContent>
