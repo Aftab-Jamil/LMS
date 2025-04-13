@@ -3,7 +3,7 @@ import { userLoggedIn, userLoggedOut } from "../features/authSlice"; // Import R
 
 export const loadUser = () => async (dispatch) => {
     try {
-        const { data } = await axios.get("http://localhost:8080/api/v1/user/profile", {
+        const { data } = await axios.get("https://lms-wizh.onrender.com/api/v1/user/profile", {
             withCredentials: true, // Important! This sends cookies
         });
 

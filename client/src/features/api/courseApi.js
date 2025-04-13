@@ -1,6 +1,6 @@
 import EditLecture from "@/pages/Admin/lecture/EditLecture"
 import {createApi,fetchBaseQuery} from "@reduxjs/toolkit/query/react"
-const baseUrl="http://localhost:8080/api/v1/course"
+const baseUrl="https://lms-wizh.onrender.com/api/v1/course"
 export const courseApi=createApi({
     reducerPath: "createApi",
     tagTypes: ["Refetch_courses_of_creator","Refetch_updated_course_detail","Refetch_updates_Lectures","Refetch_Updated_Particular_Lecture"],
@@ -119,7 +119,8 @@ export const courseApi=createApi({
                 url:"/enrolled-courses",
                 method:"GET"
             })
-        })
+        }),
+        
     })
 })
 export const {useCreateCourseMutation,useGetAllCoursesOfACreatorQuery,useEditCourseMutation,useGetCourseByCourseIdQuery,useCreateLectureMutation,useGetLectureOfCourseQuery,useGetLectureByLectureIdQuery,useRemoveLectureByLectureIdMutation,useEditLectureMutation,useTogglePublishCourseMutation,useGetAllPublishedCourseQuery,useGetCourseWithPaymentdetailsQuery,useGetEnrolledCoursesQuery,useGetSearchCourseQuery}=courseApi

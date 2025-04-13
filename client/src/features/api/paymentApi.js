@@ -1,5 +1,5 @@
 import {createApi,fetchBaseQuery} from "@reduxjs/toolkit/query/react"
-const baseUrl="http://localhost:8080/api/v1/payment"
+const baseUrl="https://lms-wizh.onrender.com/api/v1/payment"
 export const paymentApi=createApi({
     reducerPath: "paymentApi",
     baseQuery: fetchBaseQuery({

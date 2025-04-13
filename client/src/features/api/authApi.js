@@ -1,6 +1,6 @@
 import {createApi,fetchBaseQuery} from "@reduxjs/toolkit/query/react"
 import { userLoggedIn, userLoggedOut } from "../authSlice";
-const UserBaseUrl="http://localhost:8080/api/v1/user/"
+const UserBaseUrl="https://lms-wizh.onrender.com/api/v1/user/"
 export const authApi=createApi({
     reducerPath: "authApi",
     baseQuery:fetchBaseQuery({
