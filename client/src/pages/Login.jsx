@@ -109,7 +109,7 @@ export function Login() {
                                 </>) : "Login"
                             }
                             </Button>
-                            <a href="http://localhost:8080/auth/google">
+                            <a href="https://lms-wizh.onrender.com/auth/google">
   <Button variant={"outline"}><img src="./src/components/ui/google logo.svg" className="h-5 w-5"></img> Google</Button>
 </a>
                         </CardFooter>
@@ -151,7 +151,7 @@ export function Login() {
                                     <Loader2 className="m-2 w-4 h-4 animate-spin" /> Loading...
                                 </>) : "SignUp"
                             }</Button>
-                            <a href="http://localhost:8080/auth/google">
+                            <a href="https://lms-wizh.onrender.com/auth/google">
   <Button variant={"outline"}><img src="./src/components/ui/google logo.svg" className="h-5 w-5"></img> Google</Button>
 </a>
                         </CardFooter>
