@@ -14,7 +14,7 @@ export default function MyLearning() {
                 {Array.from({length: 3}).map((_,index)=><CourseSkeleton key={index}/>)}
                 </div>
             ):(
-                data?.courses?.length===0? <><h1 className='md:text-xl text-gray-800'>You haven't enrolled in any of the courses:</h1></>:<div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3'>
+                data?.courses?.length===0? <><h1 className='md:text-xl text-gray-800 dark:text-gray-300'>You haven't enrolled in any of the courses:</h1></>:<div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3'>
                 {data?.courses?.map((course)=>
                 <Link  to={`/course/${course._id}`}>
                 <Course key={course._id} course={course}/>

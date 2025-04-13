@@ -105,10 +105,10 @@ export default function Profile() {
             </div>
             
       </div>
-      <h1 className='text-xl font-bold text-gray-800 mb-3'>Courses you are Enrolled in</h1>
+      <h1 className='text-xl font-bold text-gray-800 mb-3 dark:text-gray-300'>Courses you are Enrolled in</h1>
       {
         data?.user?.enrolledCourses?.length===0?
-        (<h1 className='text-gray-800'>You haven't Enrolled in any Courses</h1>):
+        (<h1 className='text-gray-800 dark:text-gray-300'>You haven't Enrolled in any Courses</h1>):
         (  isLoading?(<div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3'>
                {Array.from({length: 3}).map((_,index)=><CourseSkeleton key={index}/>)}
                         </div>
