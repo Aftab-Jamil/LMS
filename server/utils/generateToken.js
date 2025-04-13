@@ -21,7 +21,7 @@ const generateToken = (res, user, message, redirectUrl = null) => {
     // Set the token as an HTTP-only cookie
     res.cookie("token", token, {
         httpOnly: true,
-        sameSite: "strict",
+        sameSite: "none",
         maxAge: 24 * 60 * 60 * 1000, // 1 day
     });
 
