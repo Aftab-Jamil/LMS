@@ -22,6 +22,7 @@ const generateToken = (res, user, message, redirectUrl = null) => {
     res.cookie("token", token, {
         httpOnly: true,
         sameSite: "none",
+        secure: true, // Use secure cookies in production
         maxAge: 24 * 60 * 60 * 1000, // 1 day
     });
 
