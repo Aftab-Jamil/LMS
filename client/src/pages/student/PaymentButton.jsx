@@ -15,7 +15,7 @@ export default function PaymentButton({coursePrice,refetch}) {
         try {
             // Step 1: Create Order from Backend
             const { data } = await axios.post(
-                "http://localhost:8080/api/v1/payment/create-order",
+                "https://lms-wizh.onrender.com/api/v1/payment/create-order",
                 { courseId },
                 { withCredentials: true }
             );
@@ -31,7 +31,7 @@ export default function PaymentButton({coursePrice,refetch}) {
                 handler: async function (response) {
                     // Step 2: Verify Payment
                     const verifyRes = await axios.post(
-                        "http://localhost:8080/api/v1/payment/verify-payment",
+                        "https://lms-wizh.onrender.com/api/v1/payment/verify-payment",
                         response,
                         { withCredentials: true }
                     );
@@ -63,7 +63,7 @@ export default function PaymentButton({coursePrice,refetch}) {
     
             rzp1.on("payment.failed",async function () {
                 const res = await axios.post(
-                    "http://localhost:8080/api/v1/payment/handle-failed-payment",
+                    "https://lms-wizh.onrender.com/api/v1/payment/handle-failed-payment",
                     { orderId: data.order.id },
                     { withCredentials: true }
                 );
